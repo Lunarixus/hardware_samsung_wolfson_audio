@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifeq ($(TARGET_AUDIOHAL_VARIANT),wolfson)
+
 LOCAL_PATH := $(call my-dir)
 
 # Audio HAL
@@ -55,3 +57,5 @@ LOCAL_SHARED_LIBRARIES := liblog libutils
 LOCAL_CFLAGS := -Wno-unused-parameter
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif
